@@ -8,6 +8,7 @@ iris = load_iris()
 X = iris.data
 y = iris.target
 
+# Hold-out with balanced division
 sss = StratifiedShuffleSplit(n_splits=1, test_size=0.25)
 # print(sss.get_n_splits(X, y))
 
