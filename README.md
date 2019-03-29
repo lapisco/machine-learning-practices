@@ -1,6 +1,8 @@
-# Codes of Machine Learning
+# Machine Learning practices
 
 ![](ml.png?raw=true)
+
+## How to install the requirements to use the codes
 
 ### Install virtualenv via pip:
 pip install virtualenv
