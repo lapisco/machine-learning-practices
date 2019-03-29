@@ -1,4 +1,4 @@
-# Codes of Machine Learning
+# Machine Learning practices
 
 ![](ml.png?raw=true)
 
