@@ -45,7 +45,7 @@ def decision_surface_mlp(n_classes):
         for i, color in zip(range(n_classes), plot_colors):
             idx = np.where(y == i)
             plt.scatter(X[idx, 0], X[idx, 1], c=color, label=target_names[i],
-                        cmap=plt.cm.RdYlBu, edgecolor='black', s=15)
+                        cmap=plt.cm.RdYlBu, edgecolor='black', s=25)
 
     plt.suptitle("Decision surface of a MLP using paired features")
     plt.legend(loc='lower right', borderpad=0, handletextpad=0)
@@ -62,7 +62,7 @@ def decision_surface_mlp_xor():
 
 
     # Train
-    clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(15,), random_state=1)
+    clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(10,), random_state=1)
     clf.fit(X, y)
 
     # Plot the decision boundary
@@ -78,10 +78,10 @@ def decision_surface_mlp_xor():
     cs = plt.contourf(xx, yy, Z, cmap=plt.cm.RdYlBu)
 
 
-    plt.plot(0, 0, 'ko')
-    plt.plot(1, 1, 'ko')
-    plt.plot(1, 0, 'wx')
-    plt.plot(0, 1, 'wx')
+    plt.plot(0, 0, 'ko', markersize=20)
+    plt.plot(1, 1, 'ko', markersize=20)
+    plt.plot(1, 0, 'wx', markersize=20)
+    plt.plot(0, 1, 'wx', markersize=20)
 
     plt.suptitle("Decision surface of a MLP for xor problem")
     plt.legend(loc='lower right', borderpad=0, handletextpad=0)
