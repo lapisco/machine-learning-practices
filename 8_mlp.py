@@ -22,7 +22,7 @@ def decision_surface_mlp(n_classes):
             y[y == 2] = 1
 
         # Train
-        clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(15,), random_state=1)
+        clf = MLPClassifier(solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(80,), random_state=1)
         clf.fit(X, y)
 
         # Plot the decision boundary
@@ -105,5 +105,5 @@ if __name__ == '__main__':
     decision_surface_mlp_xor()
 
 
-    # decision_surface_mlp(3)
+    decision_surface_mlp(3)
 
