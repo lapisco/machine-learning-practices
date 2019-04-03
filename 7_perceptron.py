@@ -66,8 +66,8 @@ def decision_surface_percetron(n_classes):
 
 
 if __name__ == '__main__':
-    X, y = load_iris_3classes()
-    # X, y = load_iris_binary()
+    X, y = load_iris_binary()
+    # X, y = load_iris_3classes()
 
     clf = Perceptron(tol=1e-3)
     clf.fit(X, y)
