@@ -24,7 +24,6 @@ def plot_dados(X, kmeans):
         plt.plot(X[kmeans.labels_ == k, 0], X[kmeans.labels_ == k, 1], 'o', color=colors[k])
         plt.plot(clusters[k, 0], clusters[k, 1], 'rX', markersize=10)
 
-
     plt.show()
 
 
@@ -40,6 +39,6 @@ if __name__ == '__main__':
 
 
     print('Predict {} {}'.format(kmeans.predict([X[0,:]]), kmeans.predict([X[140,:]])))
-    print('Labes {}'.format(kmeans.labels_))
+    print('Labels {}'.format(kmeans.labels_))
 
     plot_dados(X, kmeans)

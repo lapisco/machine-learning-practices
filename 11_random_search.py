@@ -3,6 +3,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.model_selection import RandomizedSearchCV
 import numpy as np
+from sklearn.metrics import confusion_matrix
 
 def load_iris_3classes():
     data = load_iris()
@@ -44,7 +45,7 @@ if __name__ == '__main__':
     random_search = dict((k,[]) for k in classifiers.keys())
 
     for clf in param_dist_dict.keys():
-        random_search[clf] = RandomizedSearchCV(classifiers[clf], param_dist_dict[clf], cv=5, n_iter=5, verbose=5, scoring='accuracy')
+        random_search[clf] = RandomizedSearchCV(classifiers[clf], param_dist_dict[clf], cv=3, n_iter=5, verbose=5, scoring='accuracy')
         random_search[clf].fit(X, y)
 
 
@@ -69,7 +70,7 @@ if __name__ == '__main__':
     print(clf_outputs['true'])
     print(clf_outputs['pred'])
 
+    print(confusion_matrix(clf_outputs['true']['MLP'][0], clf_outputs['pred']['MLP'][0]))
 
     # TODO compute metrics
-
 

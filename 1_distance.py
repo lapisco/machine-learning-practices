@@ -13,8 +13,8 @@ maca        = [0, 0, 1, 0, 0]
 tangerina   = [0, 1, 2, 1, 1]
 
 
-print(distance.cityblock(laranja, tangerina))
-print(distance.euclidean(laranja, tangerina))
+print("Cityblock (laranja, tangerina): {}".format(distance.cityblock(laranja, tangerina)))
+print("Euclidean (laranja, tangerina): {}".format(distance.euclidean(laranja, tangerina)))
 
-print(distance.euclidean(maca, tangerina))
-print(distance.cityblock(maca, tangerina))
+print("Cityblock (maca, tangerina): {}".format(distance.cityblock(maca, tangerina)))
+print("Euclidean (maca, tangerina): {}".format(distance.euclidean(maca, tangerina)))

@@ -26,7 +26,10 @@ for train_index, test_index in sss.split(X, y):
     neigh = KNeighborsClassifier(n_neighbors=3)
     neigh.fit(X_train, y_train)
 
+    # kNN test
     y_predicted = neigh.predict(X_test)
+
+    # Acurácia
     acc = np.sum(y_test == y_predicted)/len(y_test)
 
     print('{}\n{}'.format(y_test, y_predicted))
