@@ -1,6 +1,6 @@
 # Machine Learning practices
 
-![](ml.png?raw=true)
+![](img/ml.png?raw=true)
 
 ## How to install the requirements to use the codes
 
